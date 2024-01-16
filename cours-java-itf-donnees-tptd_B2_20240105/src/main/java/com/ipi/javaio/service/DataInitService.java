@@ -23,7 +23,8 @@ public class DataInitService implements CommandLineRunner {
     @Override
     public void run(String... argv) throws Exception {
         if (this.salarieAideADomicileService.countSalaries() != 0) {
-            salarieAideADomicileImportCsvService.exportFile();;
+            ///salarieAideADomicileImportCsvService.exportFile();
+            return;
         }
 
         SalarieAideADomicile s1 = this.salarieAideADomicileService.creerSalarieAideADomicile(

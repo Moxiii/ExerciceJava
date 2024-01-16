@@ -8,7 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
-
+import java.util.List;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.LocalDate;
 
 @Service
@@ -34,12 +37,14 @@ public class SalarieAideADomicileImportCsvService {
 
 
                 // Enregistrez le salarié en base de données
-                salarieAideADomicileService.saveSalarie(salarie);
+                ///salarieAideADomicileService.saveSalarie(salarie);
             }
         } catch (IOException | CsvException e) {
             throw new SalarieException("Erreur lors de l'import du fichier CSV", e);
         }
     }
+
+    /*
     public void exportFile() throws SalarieException {
         String filePath = "chemin/vers/salaries_a_importer.csv";
 
@@ -62,6 +67,7 @@ public class SalarieAideADomicileImportCsvService {
         }
     }
 }
+*/
     }
 
 

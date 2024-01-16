@@ -27,10 +27,10 @@ public class SalarieAideADomicileExportCsvService {
         exportBase(writer, salaries);
     }
     public void exportBase(PrintWriter writer, Iterable<SalarieAideADomicile> salaries) {
-        writer.println("Id, Nom, Prenom, JoursTravaillesAnnee ,jour travailler, conge payer,  );
+        writer.println("Id, Nom, JoursTravaillesAnnee ,jour travailler, conge payer"  );
 
         for (SalarieAideADomicile salarie : salaries) {
-            String line = escapeAndConcatValues(salarie.getId(), salarie.getNom(), salarie.getPrenom(), salarie.getJoursTravaillesAnneeN(),salarie.getCongesPayesAcquisAnneeN());
+            String line = escapeAndConcatValues(salarie.getId(), salarie.getNom(), salarie.getJoursTravaillesAnneeN(),salarie.getCongesPayesAcquisAnneeN());
             writer.println(line);
         }
     }
@@ -45,8 +45,4 @@ public class SalarieAideADomicileExportCsvService {
 
         return result.deleteCharAt(result.length() - 1).toString();
     }
-}
-    }
-
-
 }

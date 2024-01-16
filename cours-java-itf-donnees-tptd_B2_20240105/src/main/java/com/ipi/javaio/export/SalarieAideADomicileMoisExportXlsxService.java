@@ -48,12 +48,6 @@ public class SalarieAideADomicileMoisExportXlsxService {
         cellHeaderPremierDuMois.setCellValue("Premier du mois");
         cellHeaderPremierDuMois.setCellStyle(styleHeader);
 
-        // TODO [TD]
-
-        Cell cellHeaderIdSalarie = headerRow.createCell(1); // 1 // COL_ID_SALARIE
-        cellHeaderPremierDuMois.setCellValue("ID salarié");
-        cellHeaderPremierDuMois.setCellStyle(styleHeader);
-
 
 
         CellStyle cellStyleBorder = newStyleBorder(workbook);

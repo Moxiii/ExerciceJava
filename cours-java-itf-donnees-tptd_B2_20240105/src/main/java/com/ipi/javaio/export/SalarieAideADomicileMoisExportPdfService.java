@@ -69,14 +69,13 @@ public class SalarieAideADomicileMoisExportPdfService {
 
         for (SalarieAideADomicileMois mois : allMois) {
             table.addCell(mois.getPremierDuMois().format(frenchDateTimeFormatter));
-            table.addCell(String.valueOf(mois.getJoursTravailles()));
-            // TODO
+            table.addCell(String.valueOf(mois.getJoursTravaillesAnneeN()));
         }
         Cell cellTotalLibelle = new Cell(1, 2);
         cellTotalLibelle.add(new Paragraph(""));
         table.addCell(cellTotalLibelle);
 
-        table.addCell(""); // TODO ?
+        table.addCell("");
 
         document.add(table);
 
